@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <p>hello </p>
+            <p>devi</p>
+            <p id="grettings">good morning</p>
+            <p>good job</p>
+            <p>today</p>
+        </div>
+    </div>
+
+    <div class="outer1">
+        <div class="inner1">
+            <p>hello </p>
+            <p>devi</p><p id="grettings1">good morning</p><p>good job</p>
+            <p>today</p>
+        </div>
+    </div>
+
+    <script>
+        
+        let devilal =  document.getElementById('grettings').previousElementSibling.innerHTML;
+        let devilal2 =  document.getElementById('grettings').previousElementSibling.style.color = 'red';
+        console.log(devilal);
+        let devilal1 =  document.getElementById('grettings').nextElementSibling.innerHTML;
+        let devilal23 =  document.getElementById('grettings').nextElementSibling.style.color = 'blue';
+        console.log(devilal);
+
+
+        //  it is differnece it can't do anything without space it coount like space that is the basic difference in both properties
+        let devilal12 =  document.getElementById('grettings1').previousSibling.innerHTML;
+        let devilal21 =  document.getElementById('grettings1').previousSibling.style.color = 'red';
+        console.log(devilal12);
+        let devilal11 =  document.getElementById('grettings1').nextSibling.innerHTML;
+        let devilal231=  document.getElementById('grettings1').nextSibling.style.color = 'blue';
+        console.log(devilal11);
+
+    </script>
+</body>
+</html>

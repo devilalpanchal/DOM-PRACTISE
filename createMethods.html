@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+
+    .addfillse{
+      border: 1px solid blue;
+      background-color: aqua;
+      padding: 20px;
+      margin-top: 100px;
+    }
+  </style>
+  <body>
+
+
+    <p class="addfillse" id="hellodevi">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa architecto hic obcaecati neque laboriosam pariatur dignissimos recusandae, tempora dolorem ad at repellendus itaque? Rem officiis saepe, pariatur nemo eius modi?
+    </p>
+
+    <script>
+
+      let newelement = document.createElement("p");
+      console.log(newelement);
+
+      let newtext = document.createTextNode("hellodev ilalpanch al");
+      console.log(newtext);
+
+      let newcomment = document.createComment("to add functionality");
+      console.log(newcomment);
+
+
+    //   append methods
+    // newelement.append(newtext)
+    newelement.appendChild(newtext)
+    // newelement.style.color = 'white'
+    document.body.append(newelement)
+    // document.body.style.background = 'blue'
+var target = document.getElementsByClassName('.addfillse');
+
+    // body.insertBefore(newtext,target[0])
+
+
+    // insert Adjacenr Methods
+
+    // postions
+    // 01 beforebegin
+    // 02 afterbegin
+    // 03 beforeend
+    // 04 afterend
+    
+// 01
+    // insertAdjacentElement methods
+    // it is use of to append tag only
+
+let target1 = document.getElementById('hellodevi');
+
+    let newH2 = document.createElement('h2')
+    let newh2text  = document.createTextNode('this is me devilal panchal')
+    newH2.appendChild(newh2text)
+    // target1.insertAdjacentElement("afterbegin",newH2);
+    // target1.insertAdjacentElement("afterend",newH2);
+    // target1.insertAdjacentElement("beforeend",newH2);
+    target1.insertAdjacentElement("beforebegin",newH2);
+    console.log(newH2);
+
+// 02
+    // insertAdjacentHTML methods
+    // it is use to append tag or also text
+
+    let newtest = "<h2> kese ho panchal</h2>";
+    target1.insertAdjacentHTML("afterend",newtest)
+
+// 03
+    // insertAdjacenttext methosd
+    // it is use only for append text
+    let newtest1 = "Best of Luck devi";
+    target1.insertAdjacentText("beforebegin",newtest1)
+
+
+
+    // replaceChild and remove child
+    
+    </script>
+  </body>
+</html>
