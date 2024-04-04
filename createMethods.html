@@ -29,6 +29,22 @@
     </ul>
 
 
+    <ul id="list2">
+      <li>orange1</li>
+      <li>apple1</li>
+      <li>banvava1</li>
+      <li>potato1</li>
+    </ul>
+
+
+    <ul id="list3" class="">
+      <li>orange10</li>
+      <li>apple10</li>
+      <li id="bcsd">banvava10</li>
+      <li>potato10</li>
+    </ul>
+
+
 
 
 
@@ -113,6 +129,45 @@ let target1 = document.getElementById('hellodevi');
     target2.removeChild(Removeoldtarget2)
     console.log(Removeoldtarget2);
 
+
+    // clone node methods
+    // it is use to copy element
+
+let target3 = document.getElementById('list').children[2];
+// let copyElement = target3.cloneNode(false);
+let copyElement = target3.cloneNode(true);
+console.log(copyElement);
+document.getElementById('list2').appendChild(copyElement)
+
+
+// DOM contains methods
+// it is use element in it or not
+let parentElement = document.getElementById('list3');
+console.log(parentElement);
+let parentElementchild = document.getElementById('abc');
+let parentElementchild1 = document.getElementById('bcsd');
+
+let find = parentElement.contains(parentElementchild)
+console.log(find);
+
+let find1 = parentElement.contains(parentElementchild1)
+console.log(find1);
+
+
+
+// hasAttribute() & hasChildNodes()  Methods
+// it is use to check attribute if attribute is has it retun true not worry about attribute is empty or fill
+let parentElement2 = document.getElementById('list3');
+let find02 = parentElement2.hasAttribute("class")
+console.log(find02);
+let find023 = parentElement2.hasAttribute("alt")
+console.log(find023);
+
+
+
+// haschildnode to check element has attribute in or not or one more thing it count space or anyting
+let find024 = parentElement2.hasChildNodes()
+console.log(find024);
 
     </script>
   </body>
