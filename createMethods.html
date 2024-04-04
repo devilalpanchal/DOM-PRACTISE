@@ -21,6 +21,18 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa architecto hic obcaecati neque laboriosam pariatur dignissimos recusandae, tempora dolorem ad at repellendus itaque? Rem officiis saepe, pariatur nemo eius modi?
     </p>
 
+    <ul id="list">
+      <li>orange</li>
+      <li>apple</li>
+      <li>banvava</li>
+      <li>potato</li>
+    </ul>
+
+
+
+
+
+
     <script>
 
       let newelement = document.createElement("p");
@@ -82,8 +94,26 @@ let target1 = document.getElementById('hellodevi');
 
 
 
+
+
     // replaceChild and remove child
-    
+    let replavenew = document.createElement('li')
+    let newpeatext = document.createTextNode('wow you replace the value')
+    replavenew.appendChild(newpeatext)
+
+    let target2 = document.getElementById('list')
+    let oldtarget2 = target2.children[0]
+    console.log(oldtarget2);
+    target2.replaceChild(replavenew,oldtarget2)
+
+
+    // to remove child
+
+    let Removeoldtarget2 = target2.children[3]
+    target2.removeChild(Removeoldtarget2)
+    console.log(Removeoldtarget2);
+
+
     </script>
   </body>
 </html>
